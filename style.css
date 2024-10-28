@@ -36,16 +36,17 @@ header {
 }
 
 /* Banner Styling */
+/* Banner Styling */
 .banner {
     position: relative;
-    width: 60%;
-    height: 60vh;
+    width: 100%; /* Full width on larger screens */
+    height: 60vh; /* Occupies 60% of the viewport height */
     overflow: hidden;
 }
 
 .banner img {
-    width: 60%;
-    height: 60%;
+    width: 100%; /* Ensures the image fills the container width */
+    height: 100%; /* Makes the image cover the entire banner height */
     object-fit: cover;
     object-position: top;
     transition: transform 0.3s;
@@ -63,7 +64,7 @@ header {
     color: white;
     font-size: 3em;
     text-align: center;
-    text-shadow: rgb(21, 21, 67);
+    text-shadow: 2px 2px 5px rgb(21, 21, 67); /* Added subtle shadow for better readability */
     margin: 0;
     transition: color 0.3s;
 }
@@ -71,6 +72,28 @@ header {
 .banner:hover h1 {
     color: goldenrod;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner {
+        height: 50vh; /* Adjust height for tablets */
+    }
+    .banner h1 {
+        font-size: 2em; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 40vh; /* Adjust height for mobile devices */
+    }
+    .banner h1 {
+        font-size: 1.5em; /* Further reduce font size for mobile */
+        padding: 0 10px; /* Add some padding for small screens */
+    }
+}
+
+
 
 /* Responsive banner for smaller screens */
 @media (max-width: 768px) {
