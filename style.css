@@ -96,6 +96,7 @@ header {
 }
 
 /* Carousel Section */
+
 .carousel {
     text-align: center;
     padding: 20px;
@@ -107,18 +108,22 @@ header {
     margin-bottom: 20px;
 }
 
+/* Add gap between images in the carousel */
 .carousel-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-wrap: nowrap; /* Ensures carousel format */
+    gap: 20px; /* Space between items */
+    overflow-x: auto; /* Allows horizontal scroll if needed */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
+    padding-bottom: 10px; /* Extra padding for better spacing at the bottom */
 }
 
 .carousel-item {
-    flex: 0 0 30%;
+    flex: 0 0 auto; /* Allows items to scroll horizontally */
     max-width: 200px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 10px; /* Horizontal margin for spacing */
 }
 
 .carousel-item img {
@@ -128,6 +133,8 @@ header {
     border-radius: 8px;
     transition: transform 0.3s;
 }
+
+
 
 /* Hover Effects */
 .carousel-item:hover {
