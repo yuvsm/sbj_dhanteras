@@ -45,7 +45,7 @@ header {
 }
 
 .banner img {
-    width: 100%; /* Ensures the image fills the container width */
+    width: 80%; /* Ensures the image fills the container width */
     height: 100%; /* Makes the image cover the entire banner height */
     object-fit: cover;
     object-position: top;
